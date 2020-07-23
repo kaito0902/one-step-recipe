@@ -1,0 +1,25 @@
+%section.hero.is-success
+  .hero-body
+    .container
+      %h1.title
+        レシピ一覧
+%section.section
+  .container
+    .columns.is-multiline
+      - @recipes.each do |recipe|
+        .column.is-4
+          .card
+            .card-image
+              %figure.image.is-4by3
+                = link_to recipe_path(recipe) do
+                  = attachment_image_tag recipe, :image
+            .card-content
+              .media
+                .media-left
+                  %figure.image.is-48x48
+                    = attachment_image_tag recipe.user, :profile_image, fallback: "no.png", class: "profile_image is-rounded"
+                .media-content
+                  .title= link_to recipe.user.username, user_path(recipe.user)
+              .content
+                %time>= recipe.updated_at.strftime("%Y-%m-%d %H:%M")
+                更新

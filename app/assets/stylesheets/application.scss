@@ -15,3 +15,23 @@
  */
 
 @import "bulma";
+
+// フラッシュメッセージとヘッダーの隙間をなくす記述
+.notification:not(:last-child){
+	margin-bottom: 0;
+}
+
+.navbar {
+	background-image: image-url('haiiro.png');
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar-end {
+	margin-left: 550px;
+}
+
+.navbar-end-end {
+	margin-left: 670px;
+}
