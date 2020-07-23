@@ -1,0 +1,31 @@
+%section.hero.is-success
+  .hero-body
+    .container
+      %h1.title
+        レシピ編集
+- if @recipe.errors.any?
+  .notification.is-danger
+    %h2
+      = pluralize(@recipe.errors.count, "error")
+      prohibited this object from being saved: not successfully
+    %ul
+      - @recipe.errors.full_messages.each do |message|
+        %li= message
+%section.section
+  .container
+    .columns.is-centered
+      .column.is-6
+        = form_for @recipe do |f|
+          .field
+            = f.label :title, "レシピ名", class: "label"
+            = f.text_field :title, class: "input"
+          .field
+            = f.label :time, "調理時間", class: "label"
+            = f.select :time, [['10分', '10分'], ['20分', '20分'], ['30分', '30分'], ['作り置き', '作り置き']], include_blank: "選択して下さい"
+          .field
+            = f.label :body, "作り方", class: "label"
+            = f.text_area :body, class: "textarea"
+          .field
+            = f.label :image, "写真", class: "label"
+            = f.attachment_field :image, class: "input"
+          = f.submit '投稿', class: "button is-danger is-outlined"
