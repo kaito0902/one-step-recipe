@@ -44,6 +44,11 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
+  def time
+    @recipes = Recipe.all
+    @recipes.where!(time: '10分')
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :time, :body, :image)
