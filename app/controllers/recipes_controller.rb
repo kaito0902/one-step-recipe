@@ -49,6 +49,21 @@ class RecipesController < ApplicationController
     @recipes.where!(time: '10分')
   end
 
+  def time2
+    @recipes = Recipe.all
+    @recipes.where!(time: '20分')
+  end
+
+  def time3
+    @recipes = Recipe.all
+    @recipes.where!(time: '30分')
+  end
+
+  def time4
+    @recipes = Recipe.all
+    @recipes.where!(time: '作り置き')
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :time, :body, :image)
