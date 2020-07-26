@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   resources :recipes do
     collection do
       get :time
+      get :time2
+      get :time3
+      get :time4
     end
   end
 end
