@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 　　　　　　　　one-step-recipe
+<img width="1440" alt="スクリーンショット 2020-07-28 11 13 07" src="">
 
-Things you may want to cover:
+# 主な使用言語
+- Haml
+- SCSS 
+- Ruby
+- JavaScript
 
-* Ruby version
+# 機能紹介
+- 新規登録・ログインをするとレシピの投稿、レシピの詳細が見れるようになります。
+- 新規会員登録、ログインがお済みでない方もレシピの一覧、レシピ投稿者一覧を閲覧可能です。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
