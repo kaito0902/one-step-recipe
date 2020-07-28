@@ -1,7 +1,7 @@
 # README
 
 # 　　　　　　　　one-step-recipe
-<img width="1440" alt="スクリーンショット 2020-07-28 11 13 07" src="">
+<img width="1440" alt="スクリーンショット 2020-07-28 11 44 40" src="https://user-images.githubusercontent.com/66310212/88613119-be6b6500-d0c7-11ea-99fc-797200501b08.png">
 
 # 主な使用言語
 - Haml
