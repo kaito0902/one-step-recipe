@@ -13,7 +13,8 @@
 - 新規会員登録、ログインがお済みでない方もレシピの一覧、レシピ投稿者一覧を閲覧可能です。
 
 # ER図
-![image](https://user-images.githubusercontent.com/66310212/88615594-38eab380-d0cd-11ea-870a-eefe417d5946.png)
+![image](https://user-images.githubusercontent.com/66310212/88845772-9f7fe680-d21f-11ea-8de8-22bb186497f8.png)
+
 
 # DB設計
 ## usersテーブル
@@ -41,3 +42,16 @@
 
 ### Association
 - belongs_to :user
+
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|content|string|null: false|
+|user|references|null: false|foreign_key: true|
+|recipe|references|null: false|foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :recipe
