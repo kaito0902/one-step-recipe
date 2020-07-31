@@ -29,7 +29,6 @@
         %article.panel.is-link
           %p.panel-heading
             By #{@recipe.user.username}
-          .panel-block
             %p.control
               = @recipe.user.profile
           = link_to user_path(@recipe.user), class: "panel-block" do
@@ -37,3 +36,20 @@
               %i.fas.fa-user{"aria-hidden" => "true"}
             = @recipe.user.username
             さんのページへ
+        %p.panel-heading コメント一覧
+        .comment.panel.is-link{:class => "border-top　mb-10"}
+          - @comments.each do |c|
+            %div.mx-2.my-2
+              - unless c.user.blank?
+                %a{:href => "#{user_path(c.user_id)}"}
+              = c.user.username unless c.user.blank?
+              %br/
+              = c.content
+            %br/
+        - if user_signed_in?
+          = form_with(model: [@recipe, @comment], local: true, id: "new_comment") do |f|
+            = f.text_area :content, class: "textarea textbox", rows: 2
+            = button_tag type: "submit", class: "is-block my-3" do
+              %i.far.fa-comments
+              コメントする
+

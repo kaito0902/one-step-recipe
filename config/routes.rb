@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :users
   resources :recipes do
+    resources :comments, only: [:create]
     collection do
       get :time
       get :time2
