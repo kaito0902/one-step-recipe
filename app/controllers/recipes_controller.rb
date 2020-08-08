@@ -6,8 +6,8 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @comments = @recipe.comments
-    @comment = @recipe.comments.build
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:user)
   end
 
   def new
