@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "home#index"
   resources :users
-  resources :recipes do
+  resources :recipes, shallow: true do
+    resources :comments, only: %i[create edit update destroy]
     collection do
       get :time
       get :time2
