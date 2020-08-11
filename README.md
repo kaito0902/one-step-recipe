@@ -19,6 +19,11 @@ Username→test,
 Email→sample1@sample.com,
 password→aaaaaa
 
+# 作成理由
+学習したRubyでアプリが作りたいと思ったので作成しました。
+なぜ、レシピアプリにしたかといいますと、自分がユーザー目線になってみたときにすごく簡単な料理だけを扱ったレシピサイトがあればいいなと思ったからです。
+ですので、１人暮らしの男性向けに作ったアプリです。
+
 # ER図
 ![image](https://user-images.githubusercontent.com/66310212/88845772-9f7fe680-d21f-11ea-8de8-22bb186497f8.png)
 
