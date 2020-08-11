@@ -13,6 +13,11 @@
 - 新規登録・ログインをするとレシピの投稿カテゴリー、レシピの詳細が見れるようになります。
 - 新規会員登録、ログインがお済みでない方もレシピの一覧、レシピ投稿者一覧を閲覧可能です。
 
+# テスト用のログインIDとpass
+Username→test,
+Email→sample1@sample.com,
+password→aaaaaa
+
 # ER図
 ![image](https://user-images.githubusercontent.com/66310212/88845772-9f7fe680-d21f-11ea-8de8-22bb186497f8.png)
 
