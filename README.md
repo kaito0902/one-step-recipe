@@ -15,9 +15,9 @@
 - 新規会員登録、ログインがお済みでない方もレシピの一覧、レシピ投稿者一覧を閲覧可能です。
 
 # テスト用のログインIDとpass
-Username→test,
-Email→sample1@sample.com,
-password→aaaaaa
+- Username→test
+- Email→sample1@sample.com
+- password→aaaaaa
 
 # 作成理由
 学習したRubyでアプリが作りたいと思ったので作成しました。
