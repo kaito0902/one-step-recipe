@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookmarks/create'
+  get 'bookmarks/destroy'
   get 'recipes/index'
   get 'recipes/show'
   get 'recipes/new'
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   resources :users
   resources :recipes, shallow: true do
     resources :comments, only: %i[create edit update destroy]
+    resource :bookmarks, only: %i[create destroy]
+    get :bookmarks, on: :collection
     collection do
       get :time
       get :time2
