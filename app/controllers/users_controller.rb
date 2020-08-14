@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @recipe = current_user.bookmark_recipes.includes(:user_id)
+  end
+
+  def bookmarks
+    @bookmark = current_user.bookmark_recipes.includes(:user_id)
   end
 
   def edit

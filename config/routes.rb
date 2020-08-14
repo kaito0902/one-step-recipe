@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'recipes/edit'
   devise_for :users
   root to: "home#index"
-  resources :users
+  resources :users do
+    get :bookmarks
+  end
   resources :recipes, shallow: true do
     resources :comments, only: %i[create edit update destroy]
     resource :bookmarks, only: %i[create destroy]
