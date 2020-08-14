@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.includes(:user)
   end
 
   def show
@@ -64,6 +64,10 @@ class RecipesController < ApplicationController
   def time4
     @recipes = Recipe.all
     @recipes.where!(time: '作り置き')
+  end
+
+  def bookmarks
+    @recipes = current_user.bookmark_recipes.includes(:user)
   end
 
   private

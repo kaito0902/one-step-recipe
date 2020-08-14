@@ -21,6 +21,8 @@
                     = @user.email
                   %td
                     = link_to "編集", edit_user_path(@user), class: "button is-primary"
+                  %td
+                    = link_to "いいね一覧", user_bookmarks_path(@user), class: "button is-primary"
             %table.table.is-fullwidth
               %tr
                 %td
